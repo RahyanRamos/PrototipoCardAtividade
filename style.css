@@ -1,0 +1,63 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.sprint{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.entrega{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.status{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.status::before{
+    content: "Status: ";
+}
+
+.status::after{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #ffcc00;
+}
+
+.status[data-status="backlog"]::after{
+    background-color: #ffcc00;
+}
+
+.status[data-status="andamento"]::after{
+    background-color: #0088cc;
+}
+
+.status[data-status="concluido"]::after{
+    background-color: #00cc00;
+}
